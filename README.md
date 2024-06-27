@@ -1,4 +1,4 @@
-Este é um repositório usado para estudo e prática pessoal, onde aprendo e testo na prática os conteúdos aprendido e treino Git. Além disso é uma forma de organização de conteúdo, onde sempre terei acesso aos meus primeiros projetos de forma limpa e organizada.
+Este é um repositório usado para estudo e prática pessoal, onde aprendo e testo os conteúdos aprendidos. Além disso é uma forma de organização de conteúdo, onde sempre terei acesso aos meus primeiros projetos de forma limpa e organizada.
 
 Intruções de uso:
 1- Fazer um fork do projeto escolhido;
