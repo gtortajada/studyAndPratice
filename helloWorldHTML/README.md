@@ -1,7 +1,7 @@
+Este é um projeto de estudo e prática pessoal, onde aprendo e testo os conteúdos aprendidos. Além disso é uma forma de organização de conteúdo, onde sempre terei acesso aos meus primeiros projetos de forma limpa e organizada.
 
-
-## Hello my world!
-### Este é meu primeiro repositório local conectado com o GitHub.
-#### Estou aprendendo também a escrever o ReadMe, o que é um arquivo ".md" e o "Cheatsheet", tudo isso pelo terminal do linux.
-##### 123 456
-###### 789
+Intruções de uso: 
+1- Fazer um fork do projeto;
+2- Em seu VsCode, instalar a extensão "Live Server"; 
+3- Apertar o botão "Go Live" na direita da barra inferior do seu VsCode; 
+4- Agora o projeto está sendo executado no navegador da sua máquina!
