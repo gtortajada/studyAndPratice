@@ -124,6 +124,83 @@ function desenhaTela() {
     }
 }
 
+//Função responsável em desenhar o tanque1 no mapa
+funciton desenhaTank(){
+    angleInRadians =tanque1Rotation * Math.PI / 180;
+    context.translate(tanque1X+16, tanque1Y+16);
+    context.rotate(angleInRadians);
+    var sourceX+Math.floor(tanque1Frames[tanque1Index] % 8) *32;
+    var sourceY=Math.floor(tanque1Frames[tanque1Index] / 8) *32;
+    context.drawImage(imagemMapeada, sourceX, sourceY,32,32,-16,-16,32,32);
+    context.setTransform(1,0,01,0,0);
+
+    tanqueIndex++;
+    if (tanque1Index ==tanque1Frames.lenght) {
+        tanqueIndex=0;
+    }
+}
+
+    //Função responsável em desenhar o tanque 2(inimigo no mapa)
+    function desenhaInimigo(){
+        var angleInRadians2 =tanque2Rotation * Math.PI / 100;
+        context.translate(tanque2X+16, tanque 2Y+16);
+        context.rotate(angleInRadians2);
+
+        var InimigoX=Math.floor(tanque2Frames[tanque2Index] % 8) *32;
+        var InimigoY=Math.floor(tanque2Frames[tanque2Index] / 8) *32;
+
+        context.drawImage(imagemMapeada, InimigoX, InimigoY,32,32,-16,-16,32,32);
+        context.setTransform(1,0,0,1,0,0);
+
+        tanque2Index++;
+        if (tanque2Index ==tanque2Frames.lenght) {
+            tanque2Index=0;
+        }
+    }
+
+
+    //Função executada quando o mapa é clicado
+    function eventoClick(){
+        direcao++;
+
+        if (direcao==5) {
+            direcao=1;
+        }
+    }
+
+    function atualizarTanque1(){
+        //Identifica a direção de movimentação
+        if (direcao==1) {
+            tanque1Rotation=90;
+            tanque1X=tanque1X+2;
+            } else if (direcao==2) {
+                tanque1Rotation=180;
+                tanque1Y=tanque1Y+2;
+            } else if (direcao==3) {
+                tanque1Rotation=270;
+                tanque1X=tanque1x-2;
+            } else if (direcao==4) {
+                tanque1Rotation=0;
+                tanque1Y=tanque1Y-2;
+            }
+    
+            //Limita movimentação
+        if (tanque1X>=416)
+                direcao=3;
+        else if (tanque1X<=0)
+            direcao=1;
+
+        if (tanque1Y<=0)
+                direcao=2;
+        else if (tanque1Y>=416)
+                direcao=4;
+        }
+
+    //Função responsável em desenhar a bandeira no mapa
+    
+
+
+
 // Fui até a linha 122! Link para continuar: https://github.com/pedromogly/TankGame_1.1/blob/master/js/tank.js
 
 //Função respnosável em desenhar o tanque1 no mapa
