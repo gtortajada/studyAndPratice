@@ -1,23 +1,18 @@
 function tabuada () {
-    let input = document.getElementById('input')
-    let res = document.getElementById('res')
-
-
-    if (input.value.length === `""`) {
-        window.alert('[ERRO] Insira algum número.')
-    } else { 
-        res.innerHTML('Calculando <br>')
-        let b = Number(input.value)
-        if (b <= 100 || b >= -100) {
-            let res = `1 x ${b} = b*1`
-        
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
+    if (num.value.length == 0) {
+        window.alert('Por favor, digite um número')
+    } else {
+        let n = Number(num.value)
+        let c = 1
+        tab.innerHTML = ''
+        while (c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
+        c++
         }
-
-    }
-
-
+    } 
 }
-
-
-// A ideia é: 1 x b = b*, e  assim por diante
-// Pensei em fazer estrutura de repetição( se for 1, se não for 'c++', mas acho que será muito trabalhoso.

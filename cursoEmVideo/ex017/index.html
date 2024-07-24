@@ -12,17 +12,17 @@
     </header>
     <section>
         <div id="dados">
-            <p>Digite o número que deseja saber a tabuada:</p>
-            <p> <input type="number" name="numero" id="input"></p>
-            <p> <input type="button" value="Calcular" onclick="tabuada()"></p>
+            <p>Número: <input type="number" name="num" id="txtn">
+            <input type="button" value="Gerar tabuada" onclick="tabuada()"></p>
         </div>
         <div id="res">
-            <p></p>
-            Aqui está a sua resposta!
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima</option>
+            </select>
         </div>
     </section>
     <footer>
-        <p>&copy;CursoemVideo</p>
+        <p>&copy; CursoemVideo</p>
     </footer>
     <script src="script.js"></script>
 </body>
