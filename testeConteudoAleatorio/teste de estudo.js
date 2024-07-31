@@ -30,12 +30,38 @@
 
 // console.log(user1[0], user2[0])
 
-const arr1 = [1,2,3];
-const arr2 = [4,5];
-const arr3 = [...arr1, ...arr2,6]; // Três pontos e nome de outra array inclui o contéudo desta outra array dentro da array que criou
+// const arr1 = [1,2,3];
+// const arr2 = [4,5];
+// const arr3 = [...arr1, ...arr2,6]; // Três pontos e nome de outra array inclui o contéudo desta outra array dentro da array que criou
 
-arr3.push(7) //Adiciona o conteúdo do parênteses (7) ao final do array
-arr3.pop() //Exclui o último elemento do array
-arr3.pop() //Exclui o último elemento do array
+// arr3.push(7) //Adiciona o conteúdo do parênteses (7) ao final do array
+// arr3.pop() //Exclui o último elemento do array
+// arr3.pop() //Exclui o último elemento do array
 
-console.log(arr3.length);
+// console.log(arr3.length); // O retorno no console é 5, sendo o 7 adicionado no 'push(7)' e o 7 e o 6 excluidos no 'pop()'.
+
+
+// let arr = [4,2,3]; - Inicializa o array com três elementos
+// arr.length = 0; - Define o comprimento do array como 0 (remove tudo dentro do array)
+// console.log(arr[0]) - Tenta acessar o primeiro elemento do array, mas o retorno é 'undefined' pq tudo de dentro foi removido.
+
+
+// let num = -1
+// if (num) {
+//     console.log('This is a non-zero value');
+// } O retorno no console sempre sempre 'This is a...' se let num for um número(mesmo que decimal ou negativo)
+
+function checkValue() {
+    if (num === undefined) {
+        console.log('A variável é undefined')
+    } else if (num === null) {
+        console.log('A variável é null')
+    } else if(num === 0) {
+        console.log('A variável é 0')
+    } else {
+        console.log('A variável é Non-zero value')
+    }
+}
+
+let num = 
+checkValue(num);
