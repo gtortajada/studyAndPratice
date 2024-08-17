@@ -1,0 +1,23 @@
+body {
+    background-color: aqua;
+}
+
+section {
+    background-color: blueviolet;
+    border-radius: 5.5px;
+    border-color: black;
+    padding: 10px;
+    field-sizing: content;
+}
+
+head{
+    background-color: yellowgreen;
+
+}
+/* div txtprinc {
+        color: blueviolet;
+        padding: 1.5;
+        line-height: 1.5;
+        field-sizing: content;
+} */
+    
