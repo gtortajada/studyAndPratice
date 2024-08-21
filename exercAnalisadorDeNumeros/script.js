@@ -1,18 +1,36 @@
-//O objetivo é adicionar o número tanto no quadro de baixo e fazer uma lista, quando em um array não mostrado no html.
+//O objetivo é adicionar o número tanto no quadro de baixo quanto em um array não mostrado no html.
+
+let arr = [
+
+
+]
+
+function adicionarValor(num){
+    arr.push(num);
+    console.log(`Valor ${num} adicionado ao array.`)
+}
+
+function mostrarAraay(){
+    console.log('Conteúdo do array', arr)
+}
+
 function adiciona() {
-    let num = document.getElementById('num')
+    let num = document.getElementById('num');
 
     if (num.value.length == 0 || 1 > num.value || num.value > 100) {
-        window.alert('[ERRO] Insira um número válido')
+        window.alert('[ERRO] Insira um número válido');
     } else {
         let entrada = window.document.getElementById('entrada')
         let result = window.document.getElementById('result')
-        let log = window.document.getElementById('log')
+        let log = window.document.getElementById('log');
         let add = window.document.getElementById('add')
 
-        log.innerHTML += `O número ${num.value} foi adicionado<br>`
+        adicionarValor()
+        mostrarAraay()
+        log.innerHTML += `O número ${num.value} foi adicionado<br>`;
 
-
+        num.value = '';
+        num.focus();
         //Adicionar em array / Adicionar no quadro a baixo
     }
 
@@ -26,6 +44,9 @@ function adiciona() {
 //Após adicionar vários números e ter o resultado (clicando em finalizar) se adicionar mais um número ele reseta as informações do array
 function finalizar() {
 
+    // if(){
+
+    // }
 }
 
 
