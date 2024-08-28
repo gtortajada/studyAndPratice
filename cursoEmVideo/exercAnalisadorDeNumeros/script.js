@@ -13,37 +13,38 @@ function adicionarValor(num) {
     }
 }
 
-function mostrarArray() {
-    console.log('Conteúdo do array', arr)
-}
-
 function adiciona() {
     let num = document.getElementById('num');
+    let limparresult = () => {
+        let resultDiv = document.getElementById('result')
+        resultDiv.innerHTML = '';
+    }
 
     if (num.value.length == 0 || 1 > num.value || num.value > 100) {
         window.alert('[ERRO] Insira um número válido');
     } else {
-        adicionarValor(num.value)
-        mostrarArray()
+        limparresult()
+        adicionarValor(num.value);
         num.value = '';
         num.focus(); //Volta o cursor para adicionar o próximo número
     }
 }
 
 function finalizar() {
+    let result = document.getElementById('result')
 
-    // if(precisa ter número dentro do array, se não mensagem de erro){ 
 
-    // } else { se tiver número dentro do array vai chegar aqui e calcular tudo.
-    // }
-    // Ao final precisa limpar o 'sistema' (array e <p> do log (número x adicionado)
-    //Fazer o cáculo e mostrar: Ao todo são x números, O maior número é x, o menor número é x, A soma dos números é x e A média dos números é x.
-    //Após adicionar vários números e ter o resultado (clicando em finalizar) se adicionar mais um número ele reseta as informações do array
+    if (arr.length == 0) {
+        window.alert('[ERRO] Nenhum número foi adicinoado!')
+    } else {
+        result.innerHTML = `Ao todo, temos ${arr.length} números adicionados.<br>`
+        let max = Math.max(...arr);
+        result.innerHTML += `O maior valor informado foi ${max}.<br>`
+        let min = Math.min(...arr);
+        result.innerHTML += `O menor valor informado foi ${min}.<br>`
+        let soma = arr.reduce((acc, curr) => acc + curr, 0);
+        result.innerHTML += `A soma dos números é ${soma}.<br>`
+        let media = arr.reduce((acc, curr) => acc + curr, 0) / arr.length;
+        result.innerHTML += `A média dos números é ${media}.<br>`
+    }
 }
-
-
-// Se tentar finalizar sem adicionar números, precisa dar window.alert('[ERRO]').
-
-//let add = window.document.getElementById('add')
-//let entrada = window.document.getElementById('entrada')
-//let result = window.document.getElementById('result')
