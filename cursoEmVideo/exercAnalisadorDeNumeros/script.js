@@ -15,10 +15,6 @@ function adicionarValor(num) {
 
 function adiciona() {
     let num = document.getElementById('num');
-    let limparresult = () => {
-        let resultDiv = document.getElementById('result')
-        resultDiv.innerHTML = '';
-    }
 
     if (num.value.length == 0 || 1 > num.value || num.value > 100) {
         window.alert('[ERRO] Insira um número válido');
@@ -26,7 +22,8 @@ function adiciona() {
         limparresult()
         adicionarValor(num.value);
         num.value = '';
-        num.focus(); //Volta o cursor para adicionar o próximo número
+        num.focus(); //Volta o cursor para adicionar o próximo número.
+        result.innerHTML = '' //Limpa a div 'result' ao adicinoar um número.
     }
 }
 
