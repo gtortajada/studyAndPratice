@@ -125,14 +125,14 @@ function desenhaTela() {
 }
 
 //Função responsável em desenhar o tanque1 no mapa
-funciton desenhaTank(){
+function desenhaTank(){
     angleInRadians =tanque1Rotation * Math.PI / 180;
     context.translate(tanque1X+16, tanque1Y+16);
     context.rotate(angleInRadians);
-    var sourceX+Math.floor(tanque1Frames[tanque1Index] % 8) *32;
+    var sourceX=Math.floor(tanque1Frames[tanque1Index] % 8) *32;
     var sourceY=Math.floor(tanque1Frames[tanque1Index] / 8) *32;
     context.drawImage(imagemMapeada, sourceX, sourceY,32,32,-16,-16,32,32);
-    context.setTransform(1,0,01,0,0);
+    context.setTransform(1,0,0,1,0,0);
 
     tanqueIndex++;
     if (tanque1Index ==tanque1Frames.lenght) {
@@ -143,7 +143,7 @@ funciton desenhaTank(){
     //Função responsável em desenhar o tanque 2(inimigo no mapa)
     function desenhaInimigo(){
         var angleInRadians2 =tanque2Rotation * Math.PI / 100;
-        context.translate(tanque2X+16, tanque 2Y+16);
+        context.translate(tanque2X+16, tanque2Y+16);
         context.rotate(angleInRadians2);
 
         var InimigoX=Math.floor(tanque2Frames[tanque2Index] % 8) *32;

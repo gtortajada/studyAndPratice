@@ -66,8 +66,4 @@
 // let num = 
 // checkValue(num);
 
-// console.log(1+"1")
-
-// console.log(1-"1")
-let numeros = [1,2,3]
-console.log(`os números são ${numeros}`)
+console.log(1+"1")
