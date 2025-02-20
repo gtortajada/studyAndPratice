@@ -1,3 +1,7 @@
+Conteúdo do curso de React da RocketSeat.
+
+O intuito deste curso é aprimorar meus conhecimentos envolvendo React e aplicar o código feito no curso em um projeto real.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
