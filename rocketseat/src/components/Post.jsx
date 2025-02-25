@@ -33,15 +33,13 @@ export function Post() {
         <textarea
           placeholder="Deixe um comentário"
         />
-        <button type="submit">Comentar</button>
+        <footer>
+        <button type="submit">Publicar</button>
+        </footer>
       </form>
     </article>
   );
 }
-
-// Parei no  6:00 minutos de vídeo!
-
-// import styles from "./Post.module.css"
 
 // Preciso de uma função que importa a foto, nome e profissão da sidebar.
 // Preciso de uma função que pega o conteúdo da postagem.
