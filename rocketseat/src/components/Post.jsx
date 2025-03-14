@@ -6,8 +6,15 @@ import { Comment } from "./Comment";
 
 import styles from "./Post.module.css"
 
+const comments= [
+  1,
+  2,
+  3,
+];
+
 export function Post({ author, publishedAt, content }) {
-  const publishedAtFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {locale: ptBR    
+  const publishedAtFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
+    locale: ptBR,
   });
 
   const publisheddateRelativeToNow = formatDistanceToNow(publishedAt, {
@@ -43,16 +50,21 @@ export function Post({ author, publishedAt, content }) {
 
       <form className={styles.commentForm}>
         <strong> Deixe seu feedback!</strong>
+
         <textarea
           placeholder="Deixe um comentário"
         />
+
         <footer>
         <button type="submit">Publicar</button>
         </footer>
       </form>
+
       <div className={styles.commentList}>
-       
+      {comments.map(comment => {
+        return <Comment />
+      })}
       </div>
     </article>
   );
-}
+} // Solução: Vou assistir a aula anterior a useState e tentar entender o que está acontecendo. Se não resolver nela volto mais uma, até resolver.
