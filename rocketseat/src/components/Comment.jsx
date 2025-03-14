@@ -2,7 +2,11 @@ import { ThumbsUp, Trash } from "@phosphor-icons/react";
 
 import styles from "./Comment.module.css";
 import Avatar from "./Avatar";
-export function Comment(author, publishedAt) {
+
+import { format, formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
+
+export function Comment({ author, publishedAt }) {
   const publishedAtFormatted = format(
     publishedAt,
     "d 'de' LLLL 'às' HH:mm'h'",
