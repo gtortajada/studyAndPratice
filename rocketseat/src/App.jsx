@@ -65,7 +65,7 @@ export function App() {
       <Header />
 
       <div className={styles.wrapper}>
-        <Sidebar />
+        <Sidebar /> 
         <main>
           {posts.map(post => {
 

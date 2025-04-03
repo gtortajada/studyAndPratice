@@ -1,22 +1,8 @@
 import { ThumbsUp, Trash } from "@phosphor-icons/react";
-
-import styles from "./Comment.module.css";
 import Avatar from "./Avatar";
+import styles from "./Comment.module.css";
 
-import { format, formatDistanceToNow } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR';
-
-export function Comment({ author, publishedAt }) {
-  const publishedAtFormatted = format(
-    publishedAt,
-    "d 'de' LLLL 'às' HH:mm'h'",
-    { locale: ptBR }
-  );
-
-  const publisheddateRelativeToNow = formatDistanceToNow(publishedAt, {
-    locale: ptBR,
-    addSuffix: true,
-  });
+export function Comment({ content }) {
   return (
     <div className={styles.comment}>
       <Avatar hasBorder={false} src={author.avatarUrl} alt="" />
@@ -39,7 +25,7 @@ export function Comment({ author, publishedAt }) {
             </button>
           </header>
 
-          <p>Muito bom Gustavo, parabéns!</p>
+          <p>{content}</p>
         </div>
 
         <footer>
